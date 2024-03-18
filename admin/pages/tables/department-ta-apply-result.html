@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="TA審核系統">
+	<meta name="author" content="NTU">
+	<meta name="keywords" content="ntu">
+
+	<title>TA審核系統</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- End fonts -->
+
+	<!-- core:css -->
+	<link rel="stylesheet" href="../../../assets/vendors/core/core.css">
+	<!-- endinject -->
+
+	<!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../../../assets/vendors/datatables.net-bs5/dataTables.bootstrap5.css">
+	<!-- End plugin css for this page -->
+
+	<!-- inject:css -->
+	<link rel="stylesheet" href="../../../assets/fonts/feather-font/css/iconfont.css">
+	<link rel="stylesheet" href="../../../assets/vendors/flag-icon-css/css/flag-icon.min.css">
+	<!-- endinject -->
+
+  <!-- Layout styles -->  
+	<link rel="stylesheet" href="../../../assets/css/admin/style.css">
+  <!-- End layout styles -->
+
+  <link rel="stylesheet" href="../../../../assets/css/custom.css">
+<link rel="shortcut icon" href="../../../assets/images/favicon.svg" />
+</head>
+<body>
+	<div class="main-wrapper">
+
+		<!-- partial:../../partials/_sidebar.html -->
+		<nav class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-brand"><span>TA</span>審核系統</div>
+        <div class="sidebar-toggler not-active">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="sidebar-body">
+        <ul class="nav">      
+          <li class="nav-item nav-category">MENU</li>
+          <li class="nav-item" data-row="menu-ta-apply">
+            <a class="nav-link" data-bs-toggle="collapse" href="#forms" role="button" aria-expanded="false" aria-controls="forms">
+              <i class="link-icon" data-feather="inbox"></i>
+              <span class="link-title">申請填表</span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse" id="forms">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+                  <a href="../../pages/forms/department-ta-apply.html" class="nav-link">TA申請</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item" data-row="menu-ta-stat">
+            <a class="nav-link"  data-bs-toggle="collapse" href="#charts" role="button" aria-expanded="false" aria-controls="charts">
+              <i class="link-icon" data-feather="pie-chart"></i>
+              <span class="link-title">統計一覽</span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+                  <a href="../../pages/charts/ta-apply-chart.html" class="nav-link">TA審查統計一覽</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#tables" role="button" aria-expanded="false" aria-controls="tables">
+              <i class="link-icon" data-feather="layout"></i>
+              <span class="link-title">表格檢視</span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav sub-menu">
+                <li class="nav-item" data-row="menu-ta-apply-review">
+                  <a href="../../pages/tables/department-ta-apply-preview.html" class="nav-link">申請預覽</a>
+                </li>
+                <li class="nav-item" data-row="menu-ta-apply-list">
+                  <a href="../../pages/tables/department-ta-apply-cal.html" class="nav-link">申請單位總覽</a>
+                </li>
+                <li class="nav-item" data-row="menu-ta-apply-result">
+                  <a href="../../pages/tables/department-ta-apply-result.html" class="nav-link">查詢審核結果</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item nav-category" data-row="menu-manage">功能管理</li>
+          <li class="nav-item" data-row="menu-manage-auth">
+            <a class="nav-link" data-bs-toggle="collapse" href="#authPages" role="button" aria-expanded="false" aria-controls="authPages">
+              <i class="link-icon" data-feather="unlock"></i>
+              <span class="link-title">Authentication</span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse" id="authPages">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+                  <a href="../../pages/auth/login.html" class="nav-link">Login</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item" data-row="menu-manage-error">
+            <a class="nav-link" data-bs-toggle="collapse" href="#errorPages" role="button" aria-expanded="false" aria-controls="errorPages">
+              <i class="link-icon" data-feather="cloud-off"></i>
+              <span class="link-title">Error</span>
+              <i class="link-arrow" data-feather="chevron-down"></i>
+            </a>
+            <div class="collapse" id="errorPages">
+              <ul class="nav sub-menu">
+                <li class="nav-item">
+                  <a href="../../pages/error/404.html" class="nav-link">404</a>
+                </li>
+                <li class="nav-item">
+                  <a href="../../pages/error/500.html" class="nav-link">500</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item nav-category">Docs</li>
+          <li class="nav-item">
+            <a href="#" target="_blank" class="nav-link">
+              <i class="link-icon" data-feather="hash"></i>
+              <span class="link-title">Documentation</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    
+		<!-- partial -->
+	
+		<div class="page-wrapper">
+				
+			<!-- partial:../../partials/_navbar.html -->
+			<nav class="navbar">
+				<a href="#" class="sidebar-toggler">
+					<i data-feather="menu"></i>
+				</a>
+				<div class="navbar-content">
+					<form class="search-form">
+						<div class="input-group">
+              <div class="input-group-text">
+                <i data-feather="search"></i>
+              </div>
+							<input type="text" class="form-control" id="navbarForm" placeholder="Search here...">
+						</div>
+					</form>
+					<ul class="navbar-nav">
+					
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<img class="wd-30 ht-30 rounded-circle" src="../../../assets/images/180x180.png" alt="profile">
+							</a>
+							<div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
+								<div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
+									<div class="mb-3">
+										<img class="wd-80 ht-80 rounded-circle" src="../../../assets/images/180x180.png" alt="">
+									</div>
+									<div class="text-center">
+										<p class="tx-16 fw-bolder">測試帳號</p>
+										<p class="tx-12 text-muted">demo@ntu.edu.tw</p>
+									</div>
+								</div>
+                <ul class="list-unstyled p-1">
+                  <li class="dropdown-item py-2">
+                    <a href="javascript:;" class="text-body ms-0">
+                      <i class="me-2 icon-md" data-feather="repeat"></i>
+                      <span>切換帳號</span>
+                    </a>
+                  </li>
+                  <li class="dropdown-item py-2">
+                    <a href="javascript:;" class="text-body ms-0">
+                      <i class="me-2 icon-md" data-feather="log-out"></i>
+                      <span>登出</span>
+                    </a>
+                  </li>
+                </ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- partial -->
+
+			<div class="page-content">
+
+				<nav class="page-breadcrumb">
+					<ol class="breadcrumb">
+						<li class="breadcrumb-item"><a href="#">TA申請</a></li>
+						<li class="breadcrumb-item active" aria-current="page">查詢審核結果</li>
+					</ol>
+				</nav>
+
+				<div class="row">
+					<div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+              <div class="card-body">
+                <h6 class="card-title">查詢審核結果</h6>
+								<p class="text-muted mb-3"></p>
+                <div class="table-responsive">
+                  <table class="table pt-3 pb-3" id="dataTableExample">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>學院</th>
+												<th>學系</th>
+												<th>專業課/共同服務課</th>
+												<th>課程識別碼</th>
+												<th>班次</th>
+												<th>課名</th>
+												<th>授課老師</th>
+												<th>審核結果</th>
+												<th>檢視詳細資料</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>C1文學院</td>
+												<td>外文系</td>
+												<td>共同/服務</td>
+												<td>102 83320</td>
+												<td>25</td>
+												<td>英文(附一小時英聽)二</td>
+												<td>王珊珊</td>
+												<td>通過</td>
+												<td><a href="../tables/department-ta-apply-preview.html">檢視</a></td>
+											</tr>
+                      <tr>
+												<td>2</td>
+												<td>C1文學院</td>
+												<td>外文系</td>
+												<td>共同/服務</td>
+												<td>102 83320</td>
+												<td>11</td>
+												<td>英文(附一小時英聽)二</td>
+												<td>劉威辰</td>
+												<td><span class="">未通過</span></td>
+												<td><a href="../tables/department-ta-apply-preview.html">檢視</a></td>
+											</tr>
+										</tbody>
+									</table>
+                </div>
+                <a href="javascript:;" class="btn btn-outline-primary mt-4 me-2"><i data-feather="download" class="me-2 icon-md"></i>匯出 EXCEL</a>
+                <a href="javascript:;" class="btn btn-outline-primary mt-4 me-2"><i data-feather="printer" class="me-2 icon-md"></i>列印 PDF</a>
+              </div>
+            </div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- partial:../../partials/_footer.html -->
+			<footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+				<p class="text-muted mb-1 mb-md-0">Copyright © 2023 國立臺灣大學教務處 Office of Academic Affairs, National Taiwan University</p>
+				
+			</footer>
+			<!-- partial -->
+	
+		</div>
+	</div>
+
+	<!-- core:js -->
+	<script src="../../../assets/vendors/core/core.js"></script>
+	<!-- endinject -->
+
+	<!-- Plugin js for this page -->
+  <script src="../../../assets/vendors/sweetalert2/sweetalert2.min.js"></script>
+  <script src="../../../assets/vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="../../../assets/vendors/datatables.net-bs5/dataTables.bootstrap5.js"></script>
+	<!-- End plugin js for this page -->
+
+	<!-- inject:js -->
+	<script src="../../../assets/vendors/feather-icons/feather.min.js"></script>
+	<script src="../../../assets/js/template.js"></script>
+	<!-- endinject -->
+
+	<!-- Custom js for this page -->
+  <script src="../../../assets/js/data-table.js"></script>
+  <script src="../../../assets/js/custom.js"></script>
+	<!-- End custom js for this page -->
+
+</body>
+</html>

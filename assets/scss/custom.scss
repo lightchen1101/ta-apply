@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+$custom-font-color-main:#000865;
+$custom-font-color-light:#6571ff;
+$custom-font-color-gray:#666;
+
+body{
+    font-family: "Noto Sans TC";
+}
+
+.card .card-title{
+    font-size: 1.3rem !important;
+    font-weight: bold !important;
+}
+.card .card-sub-title{
+    font-size: 1rem;
+    font-weight: bold;
+    margin:0.875rem 0;
+}
+h4{
+    color:$custom-font-color-gray;
+    span{
+        color:$custom-font-color-light;
+        margin:0 .3rem;
+    }
+}
+//demo
+#apply-form-group{
+    display: none;
+}
+.th-m{
+    font-weight: bold !important;
+}
