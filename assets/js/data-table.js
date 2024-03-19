@@ -13,6 +13,10 @@ $(function() {
         "lengthMenu":     "每頁列數 _MENU_ 列",
         "info":           "_START_ 到 _END_ 共 _TOTAL_ 列",
         "infoEmpty":      "0 到 0 共 0 列",
+      },
+      scrollX: true,
+      scroller: {
+        loadingIndicator: true
       }
     });
     $('#dataTableExample').each(function() {
