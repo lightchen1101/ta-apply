@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
 body {
   font-family: "Noto Sans TC";
+  overflow: auto;
   -webkit-overflow-scrolling: touch;
 }
 
