@@ -14,10 +14,9 @@ $(function() {
         "info":           "_START_ 到 _END_ 共 _TOTAL_ 列",
         "infoEmpty":      "0 到 0 共 0 列",
       },
+      paging: true,
       scrollX: true,
-      scroller: {
-        loadingIndicator: true
-      }
+      scroller:true
     });
     $('#dataTableExample').each(function() {
       var datatable = $(this);
