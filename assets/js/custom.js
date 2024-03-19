@@ -79,7 +79,7 @@ $(function() {
     //ta-apply
     $("#search-course").on("click", function() {
         const chkcoursenum = $("#search-coursenum").val();
-        if(chkcoursenum=="102 8320"){
+        if(chkcoursenum=="102 83320"){
             $("#apply-form-group").css("display","block");
             $("input[data-row='checknewcourse-y']").prop("checked",true);
             $("input[data-row='newcourse-y']").show();
