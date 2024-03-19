@@ -30,12 +30,12 @@ $(function() {
     new Chart($("#chartjsBar"), {
       type: 'bar',
       data: {
-        labels: [ "文學院", "理學院", "社科學院", "醫學院", "管理學院", "生科學院", "其他", "共同教育中心"],
+        labels: [ "C1文學院", "C2理學院", "C3社科學院", "C4醫學院", "C7管理學院", "CB生科學院", "CO其他", "CGRE共同教育中心"],
         datasets: [
           {
             label: "Population",
             backgroundColor: [colors.primary, colors.danger, colors.warning, colors.success, colors.info, colors.light, colors.dark, colors.muted],
-            data: [66166,272250,0,0,0,0,0,0],
+            data: [155564,760946,281633,56305,72600,72600,70470,82645],
           }
         ]
       },
@@ -83,13 +83,13 @@ $(function() {
     new Chart($('#chartjsDoughnut'), {
       type: 'doughnut',
       data: {
-        labels: ["文學院", "理學院", "社科學院", "醫學院", "管理學院", "生科學院", "其他", "共同教育中心"],
+        labels: [ "C1文學院", "C2理學院", "C3社科學院", "C4醫學院", "C7管理學院", "CB生科學院", "CO其他", "CGRE共同教育中心"],
         datasets: [
           {
             label: "Population (millions)",
             backgroundColor: [colors.primary, colors.danger, colors.warning, colors.success, colors.info, colors.light, colors.dark, colors.muted],
             borderColor: colors.cardBg,
-            data: [66166,272250,0,0,0,0,0,0],
+            data: [155564,760946,281633,56305,72600,72600,70470,82645],
           }
         ]
       },
