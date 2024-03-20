@@ -17,6 +17,7 @@ $(function() {
       paging: true,
       scrollX: true,
       scroller:true
+      //scrollCollapse: true,
     });
     $('#dataTableExample').each(function() {
       var datatable = $(this);
