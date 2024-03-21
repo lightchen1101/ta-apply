@@ -3,6 +3,7 @@ body {
   font-family: "Noto Sans TC";
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  font-size: 1rem !important;
 }
 
 .card .card-title {
@@ -34,4 +35,12 @@ h4 span {
 
 .auth-page .auth-side-wrapper {
   background-image: url(../../assets/images/219x452.jpg);
+}
+
+.sidebar .sidebar-body .nav .nav-item .nav-link .link-title {
+  font-size: 1rem;
+}
+
+.sidebar .sidebar-body .nav.sub-menu .nav-item .nav-link {
+  font-size: 0.875rem;
 }/*# sourceMappingURL=custom.css.map */
