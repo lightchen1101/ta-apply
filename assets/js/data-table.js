@@ -16,8 +16,11 @@ $(function() {
       },
       //paging: true,
       scrollX: true,
-      scroller:true
+      scroller:true,
       //scrollCollapse: true,
+      fixedColumns: {
+        left: 5
+      }
     });
     $('#dataTableExample').each(function() {
       var datatable = $(this);

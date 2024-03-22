@@ -43,4 +43,22 @@ h4 span {
 
 .sidebar .sidebar-body .nav.sub-menu .nav-item .nav-link {
   font-size: 0.875rem;
+}
+
+.ta-apply-table thead {
+  background: #fff;
+}
+.ta-apply-table thead tr {
+  background: #fff;
+}
+.ta-apply-table thead tr th:nth-child(5) {
+  position: sticky !important;
+  left: 0;
+  background: #fff;
+  z-index: 9;
+}
+.ta-apply-table td:nth-child(5) {
+  position: sticky;
+  left: 0;
+  background: #fff;
 }/*# sourceMappingURL=custom.css.map */
